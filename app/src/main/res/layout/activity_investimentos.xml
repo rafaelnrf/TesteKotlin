@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.rferreira.testebrq.MainActivity"
+        android:id="@+id/activity_main">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.127" />
+
+
+        <TextView
+            android:id="@+id/fundName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text=""
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/whatIs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="40dp"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fundName"/>
+
+        <TextView
+            android:id="@+id/definition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/whatIs"/>
+
+        <TextView
+            android:id="@+id/riskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text=""
+            android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/definition" />
+
+        <TextView
+            android:id="@+id/infoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/riskTitle"/>
+
+
+        <TextView
+            android:id="@+id/col_periodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+
+        <TextView
+            android:id="@+id/col_fundo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Fundo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintLeft_toLeftOf="@+id/col_periodo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+
+        <TextView
+            android:id="@+id/col_cdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="CDI"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintLeft_toLeftOf="@+id/col_fundo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+
+
+
+        <TextView
+            android:id="@+id/col_periodo_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Mês"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_periodo" />
+
+        <TextView
+            android:id="@+id/col_fundo_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintLeft_toLeftOf="@+id/col_periodo_month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_fundo" />
+
+        <TextView
+            android:id="@+id/col_cdi_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintLeft_toLeftOf="@+id/col_fundo_month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_cdi" />
+
+        <TextView
+            android:id="@+id/col_periodo_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Ano"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_periodo_month" />
+
+        <TextView
+            android:id="@+id/col_fundo_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintLeft_toLeftOf="@+id/col_periodo_year"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_fundo_month" />
+
+        <TextView
+            android:id="@+id/col_cdi_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintLeft_toLeftOf="@+id/col_fundo_year"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_cdi_month" />
+
+        <TextView
+            android:id="@+id/col_periodo_12month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="12 meses"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_periodo_year" />
+
+        <TextView
+            android:id="@+id/col_fundo_12month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintLeft_toLeftOf="@+id/col_periodo_12month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_fundo_year" />
+
+        <TextView
+            android:id="@+id/col_cdi_12month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintLeft_toLeftOf="@+id/col_fundo_12month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_cdi_year" />
+
+
+        <TextView
+            android:id="@+id/col_taxa_administracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Taxa de administração"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_periodo_12month" />
+
+        <TextView
+            android:id="@+id/col_ta_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_taxa_administracao"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_periodo_12month" />
+
+
+        <TextView
+            android:id="@+id/col_aplicacao_inicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Aplicação inicial"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_taxa_administracao" />
+
+        <TextView
+            android:id="@+id/col_ai_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_aplicacao_inicial"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_ta_valor" />
+
+
+        <TextView
+            android:id="@+id/col_movimentacao_minima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Movimentação mínima"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_aplicacao_inicial" />
+
+        <TextView
+            android:id="@+id/col_mv_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_movimentacao_minima"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_ai_valor" />
+
+
+        <TextView
+            android:id="@+id/col_saldo_minimo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Saldo mínimo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_movimentacao_minima" />
+
+        <TextView
+            android:id="@+id/col_sm_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_saldo_minimo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_mv_valor" />
+
+
+        <TextView
+            android:id="@+id/col_resgate_valor_bruto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Resgate (valor bruto)"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_saldo_minimo" />
+
+        <TextView
+            android:id="@+id/col_rvb_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_resgate_valor_bruto"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_sm_valor" />
+
+        <TextView
+            android:id="@+id/col_cota_valor_bruto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Cota (valor bruto)"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_resgate_valor_bruto" />
+
+        <TextView
+            android:id="@+id/col_cvb_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_cota_valor_bruto"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_rvb_valor" />
+
+
+        <TextView
+            android:id="@+id/col_pagamento_valor_bruto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Pagamento (valor bruto)"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_cota_valor_bruto" />
+
+        <TextView
+            android:id="@+id/col_pvb_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_pagamento_valor_bruto"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/col_cvb_valor" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

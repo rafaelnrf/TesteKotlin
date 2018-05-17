@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TabContatoActivity">
+        </activity>
+        <activity
+            android:name=".TabInvestimentosActivity">
+        </activity>
     </application>
 
 </manifest>
