@@ -33,7 +33,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:background="#e50000"/>
+                android:background="#e50000"
+                android:tabStripEnabled="false"/>
         </LinearLayout>
 
     </TabHost>

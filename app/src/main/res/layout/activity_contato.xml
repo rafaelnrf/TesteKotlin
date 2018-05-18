@@ -13,16 +13,80 @@
         tools:context="com.example.rferreira.testebrq.MainActivity"
         android:id="@+id/activity_main">
 
-
+        <TextView
+            android:id="@+id/investimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Contato"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/ll_main_layout"
             android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/investimento">
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/mensagem_obrigado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="obrigado"
+            android:clickable="true"
+            android:textColor="#cccccc"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:autoLink=""
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_main_layout" />
+
+        <TextView
+            android:id="@+id/mensagem_sucesso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Mensagem enviada \ncom sucesso :)"
+            android:clickable="true"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:autoLink=""
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mensagem_obrigado" />
+
+
+        <TextView
+            android:id="@+id/enviar_nova_mensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:text="Enviar nova mensagem"
+            android:clickable="true"
+            android:textColor="@color/colorSan"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:onClick="reiniciaFormularioContato"
+            android:autoLink=""
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mensagem_sucesso"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 

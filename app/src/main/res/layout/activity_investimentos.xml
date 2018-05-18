@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".MainActivity">
+
+
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -15,39 +18,58 @@
 
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/investimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:layout_marginTop="20dp"
+            android:text="Investimento"
             android:textAlignment="center"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127" />
+            app:layout_constraintVertical_bias="0" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text=""
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/investimento" />
 
 
         <TextView
             android:id="@+id/fundName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             android:text=""
             android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title" />
+            app:layout_constraintTop_toTopOf="@+id/title"
+            android:fontFamily="@font/dinmittelschriftstd"/>
 
         <TextView
             android:id="@+id/whatIs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:layout_marginTop="40dp"
             android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@id/fundName"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/fundName"/>
+            app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView
             android:id="@+id/definition"
@@ -55,75 +77,151 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
-            android:layout_marginTop="40dp"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/whatIs"/>
+            app:layout_constraintTop_toBottomOf="@+id/whatIs"/>
 
         <TextView
             android:id="@+id/riskTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="30dp"
             android:text=""
             android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/definition" />
+            app:layout_constraintTop_toBottomOf="@+id/definition" />
+
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/barCores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/riskTitle"
+            android:shrinkColumns="*" android:padding="0dp"  android:stretchColumns="*" >
+
+
+            <TableRow
+                android:id="@+id/tableRowImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:padding="20dp">
+                <TextView
+                    android:id="@+id/risk1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="  "
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="#61dd6a"
+                    />
+                <TextView
+                    android:id="@+id/risk2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="#22c371"/>
+                <TextView
+                    android:id="@+id/risk3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="#ffc325"/>
+                <TextView
+                    android:id="@+id/risk4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="#ff752b"/>
+                <TextView
+                    android:id="@+id/risk5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="#ff3530"/>
+            </TableRow>
+
+        </TableLayout>
+
 
         <TextView
             android:id="@+id/infoTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="18sp"
             android:textAlignment="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/riskTitle"/>
+            app:layout_constraintTop_toBottomOf="@+id/barCores"/>
 
 
         <TextView
             android:id="@+id/col_periodo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/infoTitle" />
 
         <TextView
             android:id="@+id/col_fundo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             android:text="Fundo"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintLeft_toLeftOf="@+id/col_periodo"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/infoTitle" />
 
         <TextView
             android:id="@+id/col_cdi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
             android:text="CDI"
-            android:textAlignment="center"
+            android:textAlignment="textEnd"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.801"
             app:layout_constraintLeft_toLeftOf="@+id/col_fundo"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/infoTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/infoTitle" />
 
 
 
@@ -131,306 +229,482 @@
             android:id="@+id/col_periodo_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Mês"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_periodo" />
+            app:layout_constraintTop_toBottomOf="@+id/col_periodo" />
 
         <TextView
             android:id="@+id/col_fundo_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintLeft_toLeftOf="@+id/col_periodo_month"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_fundo" />
+            app:layout_constraintTop_toBottomOf="@+id/col_fundo" />
 
         <TextView
             android:id="@+id/col_cdi_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.801"
             app:layout_constraintLeft_toLeftOf="@+id/col_fundo_month"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_cdi" />
+            app:layout_constraintTop_toBottomOf="@+id/col_cdi" />
 
         <TextView
             android:id="@+id/col_periodo_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Ano"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_periodo_month" />
+            app:layout_constraintTop_toBottomOf="@+id/col_periodo_month" />
 
         <TextView
             android:id="@+id/col_fundo_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintLeft_toLeftOf="@+id/col_periodo_year"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_fundo_month" />
+            app:layout_constraintTop_toBottomOf="@+id/col_fundo_month" />
 
         <TextView
             android:id="@+id/col_cdi_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.801"
             app:layout_constraintLeft_toLeftOf="@+id/col_fundo_year"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_cdi_month" />
+            app:layout_constraintTop_toBottomOf="@+id/col_cdi_month" />
 
         <TextView
             android:id="@+id/col_periodo_12month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="12 meses"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_periodo_year" />
+            app:layout_constraintTop_toBottomOf="@+id/col_periodo_year" />
 
         <TextView
             android:id="@+id/col_fundo_12month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintLeft_toLeftOf="@+id/col_periodo_12month"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_fundo_year" />
+            app:layout_constraintTop_toBottomOf="@+id/col_fundo_year" />
 
         <TextView
             android:id="@+id/col_cdi_12month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.801"
             app:layout_constraintLeft_toLeftOf="@+id/col_fundo_12month"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_cdi_year" />
+            app:layout_constraintTop_toBottomOf="@+id/col_cdi_year" />
 
 
         <TextView
             android:id="@+id/col_taxa_administracao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
             android:text="Taxa de administração"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_periodo_12month" />
+            app:layout_constraintTop_toBottomOf="@+id/col_periodo_12month" />
 
         <TextView
             android:id="@+id/col_ta_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_taxa_administracao"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_periodo_12month" />
+            app:layout_constraintTop_toBottomOf="@+id/col_periodo_12month" />
 
 
         <TextView
             android:id="@+id/col_aplicacao_inicial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Aplicação inicial"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_taxa_administracao" />
+            app:layout_constraintTop_toBottomOf="@+id/col_taxa_administracao" />
 
         <TextView
             android:id="@+id/col_ai_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_aplicacao_inicial"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_ta_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_ta_valor" />
 
 
         <TextView
             android:id="@+id/col_movimentacao_minima"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Movimentação mínima"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_aplicacao_inicial" />
+            app:layout_constraintTop_toBottomOf="@+id/col_aplicacao_inicial" />
 
         <TextView
             android:id="@+id/col_mv_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_movimentacao_minima"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_ai_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_ai_valor" />
 
 
         <TextView
             android:id="@+id/col_saldo_minimo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Saldo mínimo"
-            android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_movimentacao_minima" />
+            app:layout_constraintTop_toBottomOf="@+id/col_movimentacao_minima" />
 
         <TextView
             android:id="@+id/col_sm_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_saldo_minimo"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_mv_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_mv_valor" />
 
 
         <TextView
             android:id="@+id/col_resgate_valor_bruto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Resgate (valor bruto)"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_saldo_minimo" />
+            app:layout_constraintTop_toBottomOf="@+id/col_saldo_minimo" />
 
         <TextView
             android:id="@+id/col_rvb_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_resgate_valor_bruto"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_sm_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_sm_valor" />
 
         <TextView
             android:id="@+id/col_cota_valor_bruto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Cota (valor bruto)"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_resgate_valor_bruto" />
+            app:layout_constraintTop_toBottomOf="@+id/col_resgate_valor_bruto" />
 
         <TextView
             android:id="@+id/col_cvb_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_cota_valor_bruto"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_rvb_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_rvb_valor" />
 
 
         <TextView
             android:id="@+id/col_pagamento_valor_bruto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
             android:text="Pagamento (valor bruto)"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textSize="18sp"
             app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_cota_valor_bruto" />
+            app:layout_constraintTop_toBottomOf="@+id/col_cota_valor_bruto" />
 
         <TextView
             android:id="@+id/col_pvb_valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.953"
             app:layout_constraintLeft_toLeftOf="@+id/col_pagamento_valor_bruto"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/col_cvb_valor" />
+            app:layout_constraintTop_toBottomOf="@+id/col_cvb_valor" />
+
+
+        <TextView
+            android:id="@+id/col_essentials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Essentials"
+            android:textAlignment="center"
+            android:textSize="@dimen/rotulo"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_pagamento_valor_bruto" />
+
+        <TextView
+            android:id="@+id/col_essentials_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Baixar"
+            android:textAlignment="center"
+            android:textColor="@color/colorSan"
+            android:textSize="@dimen/TVValue"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_essentials"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_pvb_valor" />
+
+
+        <TextView
+            android:id="@+id/col_desempenho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Desempenho"
+            android:textAlignment="center"
+            android:textSize="@dimen/rotulo"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_essentials" />
+
+        <TextView
+            android:id="@+id/col_desempenho_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Baixar"
+            android:textAlignment="center"
+            android:textColor="@color/colorSan"
+            android:textSize="@dimen/TVValue"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_desempenho"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_essentials_valor" />
+
+        <TextView
+            android:id="@+id/col_complementares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Complementares"
+            android:textAlignment="center"
+            android:textSize="@dimen/rotulo"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_desempenho" />
+
+        <TextView
+            android:id="@+id/col_complementares_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Baixar"
+            android:textAlignment="center"
+            android:textColor="@color/colorSan"
+            android:textSize="@dimen/TVValue"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_complementares"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_desempenho_valor" />
+
+
+        <TextView
+            android:id="@+id/col_regulamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Regulamento"
+            android:textAlignment="center"
+            android:textSize="@dimen/rotulo"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_complementares" />
+
+        <TextView
+            android:id="@+id/col_regulamento_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Baixar"
+            android:textAlignment="center"
+            android:textColor="@color/colorSan"
+            android:textSize="@dimen/TVValue"
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_regulamento"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_complementares_valor" />
+
+        <TextView
+            android:id="@+id/col_adesao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Adesão"
+            android:textSize="@dimen/rotulo"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_regulamento" />
+
+        <TextView
+            android:id="@+id/col_adesao_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Baixar"
+            android:clickable="true"
+            android:textColor="@color/colorSan"
+            android:textSize="@dimen/TVValue"
+            android:textAlignment="center"
+            android:autoLink=""
+            app:layout_constraintHorizontal_bias="0.953"
+            app:layout_constraintLeft_toLeftOf="@+id/col_adesao"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_regulamento_valor" />
+
+
+
+
+        <Button
+            android:id="@+id/bt_investir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Investir"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/botao_enviar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/col_adesao"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 

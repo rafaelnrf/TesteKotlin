@@ -5,6 +5,17 @@ import android.os.Bundle
 import android.widget.Toast
 import android.widget.TabHost
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.PorterDuff
+import android.widget.TextView
+import android.R.attr.host
+import android.view.View
+import android.widget.TabWidget
+import android.R.attr.host
+
+
+
+
 
 
 class MainActivity :  TabActivity()  {
@@ -17,10 +28,18 @@ class MainActivity :  TabActivity()  {
 
         val tabHost = findViewById<TabHost>(android.R.id.tabhost)
         if (tabHost != null) {
+            tabHost.getTabWidget().setStripEnabled(false);
             addTab(tabHost, "Investimentos", "Investimentos", TabInvestimentosActivity::class.java)
             addTab(tabHost, "Contatos", "Contatos", TabContatoActivity::class.java)
             tabHost.currentTab = 0
-            tabHost.setOnTabChangedListener { tabId -> Toast.makeText(applicationContext, tabId, Toast.LENGTH_SHORT).show() }
+            val widget = tabHost.getTabWidget()
+            for (i in 0 until widget.getChildCount()) {
+                val v = widget.getChildAt(i)
+                val tv = v.findViewById<TextView>(android.R.id.title) as TextView ?: continue
+                v.setBackgroundResource(R.drawable.tab_selector)
+                tv.setTextColor(Color.parseColor("#ffffff"));
+            }
+
         }
 
     }
